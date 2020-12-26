@@ -9,6 +9,8 @@ def scrape_books
  parsed_page = Nokogiri::HTML(unparsed_data)
   #i want to get titles and ratings
 #   title = parsed_page.css("a").first["title"]
+#create variable and test what that dat is w/byebug by running ruby and file
+testing = parsed_page.search('a').text
   byebug
 end
 scrape_books
