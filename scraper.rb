@@ -10,7 +10,7 @@ def scrape_books
   #i want to get titles and ratings
 #   title = parsed_page.css("a").first["title"]
 #create variable and test what that dat is w/byebug by running ruby and file
-testing = parsed_page.css('section').text
-  byebug
+testing = parsed_page.css('ol').css('.row').css('h3').text
+ byebug
 end
 scrape_books
