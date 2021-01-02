@@ -12,24 +12,24 @@ def scrape_books_titles_and_ratings
 #   title = parsed_page.css("a").first["title"]
 #create variable and test what that dat is w/byebug by running ruby and file
 testing = parsed_page.css('ol').css('.row').css('h3')
-ratings = parsed_page.css('ol').css('.row').css('p').css('.star-rating')
+ratings = parsed_page.css('p').css('.star-rating')
 prices = parsed_page.css('p').css('.price_color')
 book_ratings =[]
 book_prices = []
 book_titles=[]
-#ratings
-# ratings.each do |rating|
-# try = rating.text
-# book_ratings << try
-# end
+#gets titles text and pushes into array
 testing.each do |title|
 attempt = title.text
 book_titles << attempt
 end
+#gets prices
 prices.each do |price|
   book_prices << price.text
 end
 #now get ratings 
+ratings.each do |rating|
+  book_ratings << rating
+end
 byebug
 
 end
