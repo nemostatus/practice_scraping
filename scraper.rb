@@ -14,6 +14,7 @@ def scrape_books_titles_and_ratings
 testing = parsed_page.css('ol').css('.row').css('h3')
 ratings = parsed_page.css('p').css('.star-rating')
 prices = parsed_page.css('p').css('.price_color')
+heading = parsed_page.css('h1').text
 book_ratings =[]
 book_prices = []
 book_titles=[]
