@@ -15,9 +15,14 @@ testing = parsed_page.css('ol').css('.row').css('h3')
 ratings = parsed_page.css('p').css('.star-rating')
 prices = parsed_page.css('p').css('.price_color')
 heading = parsed_page.css('h1').text
+nav = parsed_page.css('div').css('.side_categories').css('a')
 book_ratings =[]
 book_prices = []
 book_titles=[]
+navs= []
+nav.each do |n|
+  navs << n.text.strip
+end
 #gets titles text and pushes into array
 testing.each do |title|
 attempt = title.text
