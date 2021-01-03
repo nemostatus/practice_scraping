@@ -36,6 +36,7 @@ end
 ratings.each do |rating|
   book_ratings << rating
 end
+combined = book_titles.zip(book_prices)
 byebug
 
 end
